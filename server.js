@@ -298,7 +298,7 @@ app.get("/api/reports/activities.csv", requireAuth, (req,res)=>{
   res.send("\\uFEFF"+csv);
 });
 
-const frontendDist = path.resolve(__dirname, "../frontend/dist");
+const frontendDist = path.resolve(__dirname, "dist");
 app.use(express.static(frontendDist));
 app.get("*", (req, res, next) => {
   if (req.path.startsWith("/api/")) return next();
