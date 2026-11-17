@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: dces-public-demo
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm run install:all && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: 22.23.5
+      - key: DATA_DIR
+        value: /tmp/dces-demo-data
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: INITIAL_ADMIN_PASSWORD
+        sync: false

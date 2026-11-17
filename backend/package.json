@@ -1,0 +1,21 @@
+{
+  "name": "dces-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^11.8.1",
+    "cors": "^2.8.5",
+    "dces-local": "file:..",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}
